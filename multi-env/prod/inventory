@@ -1,2 +1,5 @@
 [mongodb]
 172.31.43.248
+
+[mongodb:vars]
+NAME=PROD-SERVER
