@@ -97,7 +97,7 @@
      tags:
       - installation
    - name: load catalogue data
-     ansible.builtin.command: mongo --host mongodb.sivadevops.website < /app/schema/catalogue.js
+     ansible.builtin.command: mongo --host 172.31.34.227 < /app/schema/catalogue.js
      tags:
       - installation
    - name: restart catalogue
