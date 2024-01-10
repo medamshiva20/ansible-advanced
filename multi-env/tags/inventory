@@ -1,5 +1,5 @@
-[mongodb]
+[catalogue]
 172.31.34.227
 
-[mongodb:vars]
+[catalogue:vars]
 NAME=DEV-SERVER
