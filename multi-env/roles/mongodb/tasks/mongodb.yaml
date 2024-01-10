@@ -1,14 +1,14 @@
-- name: Copy mongodb repo into yum.repos.d
+- name: Copy mongodb.repo into yum.repo.d
   ansible.builtin.copy:
    src: mongodb.repo
-   dest: /etc/yum.repos.d/mongodb.repo
+   dest: /etc/yum.repo.d/mongodb.repo
 
 - name: Install mongodb-org package
   ansible.builtin.yum:
    name: mongodb-org
    state: installed
 
-- name: Start and enable mongodb service
+- name: Start and Enable service
   ansible.builtin.service:
    name: mongod
    state: started
