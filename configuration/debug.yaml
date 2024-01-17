@@ -1,5 +1,6 @@
 - name: Demo is on ansible configuration file 
   hosts: centos
+  become: yes
   tasks:
    - name: print a message
      ansible.builtin.shell: echo Hello From Ansible Server > /tmp/hello.txt
