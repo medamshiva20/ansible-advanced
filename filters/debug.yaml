@@ -3,7 +3,7 @@
   vars:
    NAME: Siva Reddy Medam
    website: https://www.joindevops.com/batch-74s
-   Greetings: Hellow Siva, How are you
+   Greetings: Hellow Siva. How are you
   become: yes
   tasks:
    - name: convert into upper case
@@ -24,4 +24,4 @@
 
    - name: split
      debug:
-      msg: "{{ Greetings | split(',') }}"
+      msg: "{{ Greetings | split('.') }}"
