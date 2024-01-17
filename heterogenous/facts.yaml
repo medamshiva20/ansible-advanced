@@ -8,8 +8,10 @@
    #Just imagine we don't have user module available
    - name: add user ubuntu
      ansible.builtin.command: adduser roboshop
-     when: ansible_facts['distribution'] == "Ubuntu"
+     #when: ansible_facts['distribution'] == "Ubuntu"
+     when: ansible_os_family == "Ubuntu"
    
    - name: add user in centos
      ansible.builtin.command: useradd roboshop
      when: ansible_facts['distribution'] == "CentOS"
+     #when: ansible_os_family == "CentOS"
