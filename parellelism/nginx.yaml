@@ -1,5 +1,6 @@
 - name: Install nginx 
   hosts: nginx
+  #serial: 3 # Using the 6 hosts scenario above as example, if the value of serial is set to 3, the first task will be completed first on three hosts, then on another batch of three hosts are completed
   become: yes
   tasks:
    - name: Install nginx package
@@ -11,3 +12,6 @@
      ansible.builtin.service:
       name: nginx
       state: started
+
+
+#ansible-playbook -i inventory -f 3 playbook.yaml -- In this example, the value is set to 3, meaning that Ansible will run tasks on up to 3 hosts in parallel.
